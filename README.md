@@ -1,1 +1,1 @@
-# Room_Occupancy_Indicating_Network
+# Room Occupancing Indicating Network
