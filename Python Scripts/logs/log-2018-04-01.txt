@@ -1,0 +1,8 @@
+Node number: 1, ['303', 0, datetime.datetime(2018, 4, 1, 21, 5, 42, 423000), 1522596942.423]
+Node number: 1, ['303', 1, datetime.datetime(2018, 4, 1, 21, 5, 44, 545000), 1522596944.545]
+Node number: 1, ['303', 0, datetime.datetime(2018, 4, 1, 21, 5, 45, 438000), 1522596945.438]
+Node number: 1, ['303', 1, datetime.datetime(2018, 4, 1, 21, 5, 47, 384000), 1522596947.384]
+Node number: 1, ['303', 0, datetime.datetime(2018, 4, 1, 21, 57, 23, 592000), 1522600043.592]
+Node number: 1, ['303', 1, datetime.datetime(2018, 4, 1, 21, 57, 31, 440000), 1522600051.44]
+Node number: 1, ['303', 0, datetime.datetime(2018, 4, 1, 21, 57, 32, 84000), 1522600052.084]
+Node number: 1, ['303', 1, datetime.datetime(2018, 4, 1, 21, 57, 36, 198000), 1522600056.198]

@@ -16,6 +16,10 @@
 #define OLED_CS 7
 #define OLED_RST 8
 
+#define MAX_RETRIES 60
+
+int num_of_retries = MAX_RETRIES;
+
 #define DEBUG
 
 #ifdef DEBUG
@@ -52,7 +56,7 @@ RF24Mesh mesh(radio, network);
  **/
 #define node_ID 1
 
-char send_packet[] = "001-0";
+char send_packet[] = "001-0\n";
 
 struct payload_t {
         unsigned long ms;
@@ -62,12 +66,49 @@ struct payload_t {
 int sensor_pin = 2;
 
 int last_sensor_state = LOW;
+int current_sensor_state = LOW;
+
 bool sensor_interrupt_flag = false;
 
 
 void sensor_ISR() {
     sensor_interrupt_flag = true;
 }
+
+int transmit_to_master(char str[], char msg_type, int size_of_str) {
+
+    if (!mesh.write(str, msg_type, size_of_str)) {
+
+        // If a write fails, check connectivity to the mesh network
+        if (!mesh.checkConnection()) {
+            //refresh the network address
+            OLED_CLR();
+            OLED_PRINTLN("Renewing Address");
+            DEBUG_PRINTLN("Renewing Address");
+            mesh.renewAddress();
+        }
+        else {
+            OLED_CLR();
+            OLED_PRINTLN("Send fail");
+
+            DEBUG_PRINTLN("Send fail");
+        }
+
+        return 0;
+    }
+    else {
+        OLED_CLR();
+        OLED_PRINTLN("Send OK: ");
+        OLED_PRINTLN(str);
+
+        DEBUG_PRINT("Send OK: ");
+        DEBUG_PRINTLN(str);
+
+        return 1;
+    }
+}
+
+
 
 void setup() {
 
@@ -106,36 +147,39 @@ void setup() {
 void loop() {
     mesh.update();
 
-    // Send to the master node every second
     if (sensor_interrupt_flag) {
         OLED_CLR();
         OLED_PRINTLN("Interrupt!");
 
+        current_sensor_state = digitalRead(sensor_pin);
 
-        if (!mesh.write(&send_packet, 'M', sizeof(send_packet))) {
+        if (current_sensor_state != last_sensor_state) {
+            last_sensor_state = current_sensor_state;
 
-            // If a write fails, check connectivity to the mesh network
-            if (!mesh.checkConnection()) {
-                //refresh the network address
-                OLED_CLR();
-                OLED_PRINTLN("Renewing Address");
-                DEBUG_PRINTLN("Renewing Address");
-                mesh.renewAddress();
-            }
-            else {
-                OLED_CLR();
-                OLED_PRINTLN("Send fail");
+            if (current_sensor_state == HIGH)
+                send_packet[4] = '1';
+            else
+                send_packet[4] = '0';
 
-                DEBUG_PRINTLN("Send fail");
-            }
-        }
-        else {
-            OLED_CLR();
-            OLED_PRINTLN("Send OK: ");
-            OLED_PRINTLN(send_packet);
+            num_of_retries = MAX_RETRIES;
 
-            DEBUG_PRINT("Send OK: ");
             DEBUG_PRINTLN(send_packet);
+
+            while(!transmit_to_master(send_packet, 'M', sizeof(send_packet))){
+                delay(500);
+                num_of_retries--;
+
+                if (num_of_retries == 0) {
+                    OLED_CLR();
+                    OLED_PRINTLN("Max retries");
+                    OLED_PRINTLN("exceeded!");
+
+                    DEBUG_PRINTLN("Max retries exceeded!");
+
+                    break;
+                }
+            }
+
         }
 
         sensor_interrupt_flag = false;

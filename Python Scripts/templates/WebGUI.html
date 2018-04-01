@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html>
+
+<title> Room Occupancy Indicating System
+</title>
+
+<body>
+<! <meta http-equiv="refresh" content="1">
+   
+<p><strong>Status:<span style="color: #{{ connection_status_colour }};"> {{ connection_status }} </span></strong></p>
+<br>
+<p> {{ read_string }} </p>
+</body>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on('connect', function() {
+        socket.emit('my event', {data: 'I\'m connected!'});
+    });
+</script>
+
+</html>

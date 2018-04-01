@@ -42,7 +42,7 @@ RF24 radio(10, 5);
 RF24Network network(radio);
 RF24Mesh mesh(radio, network);
 
-char received_packet[] = "000-0";
+char received_packet[] = "000-0\n";
 
 long long print_timer = 0;
 
@@ -56,9 +56,10 @@ void setup() {
     OLED_CLR();
     oled.set2X();
 
-    OLED_PRINTLN("**Master**");
+    OLED_PRINTLN("Syncing");
+    OLED_PRINTLN("with PC");
 
-    DEBUG_BEGIN(115200);
+    Serial.begin(115200);
 
     // Set the nodeID to 0 for the master node
     mesh.setNodeID(0);
@@ -66,6 +67,29 @@ void setup() {
     DEBUG_PRINTLN(mesh.getNodeID());
     // Connect to the mesh
     mesh.begin();
+
+    while(1) {
+        Serial.print("Sync\n");
+        delay(100);
+        char received_char;
+        if (Serial.available()) {
+            received_char = Serial.read();
+
+            if (received_char == 'A') {
+                break;
+            }
+        }
+    }
+
+    OLED_CLR();
+    OLED_PRINTLN("Synced");
+    OLED_PRINTLN("with PC!");
+    delay(500);
+
+    OLED_CLR();
+    OLED_PRINTLN("**Master**");
+
+
 }
 
 void loop() {
@@ -83,8 +107,11 @@ void loop() {
         switch (header.type) {
             // Display the incoming millis() values from the sensor nodes
             case 'M':
-                network.read(header, &received_packet, sizeof(received_packet) + 1);
-                DEBUG_PRINTLN(received_packet);
+                network.read(header, &received_packet, sizeof(received_packet));
+                DEBUG_PRINT("Received: ");
+                DEBUG_PRINT(received_packet);
+
+                Serial.print(received_packet);
 
                 OLED_CLR();
                 OLED_PRINTLN("Received: ");
