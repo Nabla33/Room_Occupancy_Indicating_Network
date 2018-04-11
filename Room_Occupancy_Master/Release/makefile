@@ -56,7 +56,7 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 AR += \
-E:\Sloeber\Room_Occupancy_Master\Release\arduino.ar \
+C:\Users\Srijal\Documents\sloeber-workspace\Room_Occupancy_Master\Release\arduino.ar \
 
 ELF += \
 Room_Occupancy_Master.elf \
@@ -72,19 +72,19 @@ all: Room_Occupancy_Master
 Room_Occupancy_Master: $(HEX)
 	@echo 'Building target: $@'
 	@echo 'Printing size:'
-	"D:\sloeber\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-size" -A "E:/Sloeber/Room_Occupancy_Master/Release/Room_Occupancy_Master.elf"
+	"D:\sloeber\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-size" -A "C:/Users/Srijal/Documents/sloeber-workspace/Room_Occupancy_Master/Release/Room_Occupancy_Master.elf"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-E:\Sloeber\Room_Occupancy_Master\Release\arduino.ar: $(AR_OBJ)
+C:\Users\Srijal\Documents\sloeber-workspace\Room_Occupancy_Master\Release\arduino.ar: $(AR_OBJ)
 	@echo 'Starting archiver'
-	"D:\sloeber\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc-ar" rcs    E:/Sloeber/Room_Occupancy_Master/Release/arduino.ar $(AR_OBJ)
+	"D:\sloeber\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc-ar" rcs    C:/Users/Srijal/Documents/sloeber-workspace/Room_Occupancy_Master/Release/arduino.ar $(AR_OBJ)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 Room_Occupancy_Master.elf: $(LINK_OBJ) $(AR)
 	@echo 'Starting combiner'
-	"D:\sloeber\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc" -Wall -Wextra -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "E:\Sloeber\Room_Occupancy_Master/Release/Room_Occupancy_Master.elf"   $(LINK_OBJ)   E:/Sloeber/Room_Occupancy_Master/Release/arduino.ar  "-LE:\Sloeber\Room_Occupancy_Master/Release" -lm
+	"D:\sloeber\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc" -Wall -Wextra -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "C:\Users\Srijal\Documents\sloeber-workspace\Room_Occupancy_Master/Release/Room_Occupancy_Master.elf"   $(LINK_OBJ)   C:/Users/Srijal/Documents/sloeber-workspace/Room_Occupancy_Master/Release/arduino.ar  "-LC:\Users\Srijal\Documents\sloeber-workspace\Room_Occupancy_Master/Release" -lm
 	@echo 'Finished building: $@'
 	@echo ' '
 

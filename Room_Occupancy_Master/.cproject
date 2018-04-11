@@ -22,17 +22,17 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24Mesh}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24Network}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SSD1306Ascii}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SSD1306Ascii/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/Wire/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24/utility}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.374314104" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
@@ -41,17 +41,17 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24Mesh}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24Network}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SSD1306Ascii}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SSD1306Ascii/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/Wire/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24/utility}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.1484147607" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
@@ -60,17 +60,17 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24Mesh}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24Network}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SSD1306Ascii}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SSD1306Ascii/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/Wire/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Room_Occupancy_Master/libraries/RF24/utility}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.353075738" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>

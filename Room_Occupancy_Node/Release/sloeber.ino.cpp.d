@@ -1,25 +1,25 @@
 sloeber.ino.cpp.o: ..\sloeber.ino.cpp \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Arduino.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/binary.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/WCharacter.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/WString.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/HardwareSerial.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Stream.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Print.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Printable.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/USBAPI.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Arduino.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\variants\eightanaloginputs/pins_arduino.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\variants\eightanaloginputs/../standard/pins_arduino.h \
- D:\sloeber\arduinoPlugin\libraries\RF24\1.3.0/RF24.h \
- D:\sloeber\arduinoPlugin\libraries\RF24\1.3.0/RF24_config.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\libraries\SPI\src/SPI.h \
- D:\sloeber\arduinoPlugin\libraries\RF24Network\1.0.8/RF24Network.h \
- D:\sloeber\arduinoPlugin\libraries\RF24Network\1.0.8/RF24Network_config.h \
- D:\sloeber\arduinoPlugin\libraries\RF24\1.3.0/RF24_config.h \
- D:\sloeber\arduinoPlugin\libraries\RF24Mesh\1.0.51/RF24Mesh.h \
- D:\sloeber\arduinoPlugin\libraries\RF24Mesh\1.0.51/RF24Mesh_config.h \
- D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\libraries\EEPROM\src/EEPROM.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Arduino.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/binary.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/WCharacter.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/WString.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/HardwareSerial.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Stream.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Print.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Printable.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/USBAPI.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Arduino.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\variants\eightanaloginputs/pins_arduino.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\variants\eightanaloginputs/../standard/pins_arduino.h \
+ C:\Users\Srijal\Documents\Arduino\libraries\RF24/RF24.h \
+ C:\Users\Srijal\Documents\Arduino\libraries\RF24/RF24_config.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\libraries\SPI\src/SPI.h \
+ C:\Users\Srijal\Documents\Arduino\libraries\RF24Network/RF24Network.h \
+ C:\Users\Srijal\Documents\Arduino\libraries\RF24Network/RF24Network_config.h \
+ C:\Users\Srijal\Documents\Arduino\libraries\RF24/RF24_config.h \
+ C:\Users\Srijal\Documents\Arduino\libraries\RF24Mesh/RF24Mesh.h \
+ C:\Users\Srijal\Documents\Arduino\libraries\RF24Mesh/RF24Mesh_config.h \
+ D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\libraries\EEPROM\src/EEPROM.h \
  C:\Users\Srijal\Documents\Arduino\libraries\SSD1306Ascii\src/SSD1306Ascii.h \
  C:\Users\Srijal\Documents\Arduino\libraries\SSD1306Ascii\src/SSD1306init.h \
  C:\Users\Srijal\Documents\Arduino\libraries\SSD1306Ascii\src/fonts/allFonts.h \
@@ -74,47 +74,47 @@ sloeber.ino.cpp.o: ..\sloeber.ino.cpp \
  C:\Users\Srijal\Documents\Arduino\libraries\SSD1306Ascii\src/utility/DigitalOutput.h \
  ..\Room_Occupancy_Node.ino
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Arduino.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Arduino.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/binary.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/binary.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/WCharacter.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/WCharacter.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/WString.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/WString.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/HardwareSerial.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/HardwareSerial.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Stream.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Stream.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Print.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Print.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Printable.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Printable.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/USBAPI.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/USBAPI.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\cores\arduino/Arduino.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\cores\arduino/Arduino.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\variants\eightanaloginputs/pins_arduino.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\variants\eightanaloginputs/pins_arduino.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\variants\eightanaloginputs/../standard/pins_arduino.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\variants\eightanaloginputs/../standard/pins_arduino.h:
 
-D:\sloeber\arduinoPlugin\libraries\RF24\1.3.0/RF24.h:
+C:\Users\Srijal\Documents\Arduino\libraries\RF24/RF24.h:
 
-D:\sloeber\arduinoPlugin\libraries\RF24\1.3.0/RF24_config.h:
+C:\Users\Srijal\Documents\Arduino\libraries\RF24/RF24_config.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\libraries\SPI\src/SPI.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\libraries\SPI\src/SPI.h:
 
-D:\sloeber\arduinoPlugin\libraries\RF24Network\1.0.8/RF24Network.h:
+C:\Users\Srijal\Documents\Arduino\libraries\RF24Network/RF24Network.h:
 
-D:\sloeber\arduinoPlugin\libraries\RF24Network\1.0.8/RF24Network_config.h:
+C:\Users\Srijal\Documents\Arduino\libraries\RF24Network/RF24Network_config.h:
 
-D:\sloeber\arduinoPlugin\libraries\RF24\1.3.0/RF24_config.h:
+C:\Users\Srijal\Documents\Arduino\libraries\RF24/RF24_config.h:
 
-D:\sloeber\arduinoPlugin\libraries\RF24Mesh\1.0.51/RF24Mesh.h:
+C:\Users\Srijal\Documents\Arduino\libraries\RF24Mesh/RF24Mesh.h:
 
-D:\sloeber\arduinoPlugin\libraries\RF24Mesh\1.0.51/RF24Mesh_config.h:
+C:\Users\Srijal\Documents\Arduino\libraries\RF24Mesh/RF24Mesh_config.h:
 
-D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.19\libraries\EEPROM\src/EEPROM.h:
+D:\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.21\libraries\EEPROM\src/EEPROM.h:
 
 C:\Users\Srijal\Documents\Arduino\libraries\SSD1306Ascii\src/SSD1306Ascii.h:
 

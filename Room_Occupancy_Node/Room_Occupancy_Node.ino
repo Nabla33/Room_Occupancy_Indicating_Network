@@ -29,6 +29,7 @@ int num_of_retries = MAX_RETRIES;
     #define OLED_CLR()        oled.clear()
     #define OLED_PRINT(x)     oled.print(x)
     #define OLED_PRINTLN(x)   oled.println(x)
+    #define DEBUG_DELAY(x)    delay(x)
 #else
     #define DEBUG_BEGIN(x)
     #define DEBUG_PRINT(x)
@@ -36,6 +37,7 @@ int num_of_retries = MAX_RETRIES;
     #define OLED_CLR()
     #define OLED_PRINT(x)
     #define OLED_PRINTLN(x)
+    #define DEBUG_DELAY(x)
 #endif
 
 SSD1306AsciiSpi oled;
@@ -63,7 +65,7 @@ struct payload_t {
         unsigned long counter;
 };
 
-int sensor_pin = 2;
+int sensor_pin = 3;
 
 int last_sensor_state = LOW;
 int current_sensor_state = LOW;
@@ -83,7 +85,8 @@ int transmit_to_master(char str[], char msg_type, int size_of_str) {
         if (!mesh.checkConnection()) {
             //refresh the network address
             OLED_CLR();
-            OLED_PRINTLN("Renewing Address");
+            OLED_PRINTLN("Renewing");
+            OLED_PRINTLN("Address");
             DEBUG_PRINTLN("Renewing Address");
             mesh.renewAddress();
         }
@@ -139,8 +142,11 @@ void setup() {
 
     mesh.begin();
 
-    OLED_PRINTLN("Waiting..");
-    DEBUG_PRINTLN(F("Waiting.."));
+    OLED_CLR();
+    OLED_PRINTLN("Standing");
+    OLED_PRINTLN("by...");
+
+    DEBUG_PRINTLN(F("Standing by..."));
 
 }
 
@@ -183,6 +189,12 @@ void loop() {
         }
 
         sensor_interrupt_flag = false;
+
+        DEBUG_DELAY(500);
+
+        OLED_CLR();
+        OLED_PRINTLN("Standing");
+        OLED_PRINTLN("by...");
     }
 
     while (network.available()) {
