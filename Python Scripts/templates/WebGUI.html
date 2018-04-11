@@ -8,17 +8,25 @@
 <body>
 <! <meta http-equiv="refresh" content="1">
    
-<p><strong>Status:<span style="color: #{{ connection_status_colour }};"> {{ connection_status }} </span></strong></p>
+<p><strong>Status:<span id="connection_status" style="color:#ff0000;"> Not Connected </span></strong></p>
 <br>
-<p> {{ read_string }} </p>
 </body>
 
+
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
 <script type="text/javascript" charset="utf-8">
-    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    let socket = io.connect('http://' + document.domain + ':' + location.port);
     socket.on('connect', function() {
         socket.emit('my event', {data: 'I\'m connected!'});
+        document.getElementById("connection_status").innerText = " Connected";
+        document.getElementById("connection_status").style = "color:#00ff00;"
     });
+
+    socket.on('event_response', data => {
+        console.log(data)
+    });
+
 </script>
 
 </html>

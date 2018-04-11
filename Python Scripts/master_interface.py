@@ -1,23 +1,28 @@
+from flask import Flask, render_template, request
+from flask_socketio import SocketIO
+from threading import Thread
+
 import requests
 import serial
 import time
 import datetime
 
-port = "COM6"
+port = "COM5"
 baud = 115200
 ser = serial.Serial(port, baud, timeout=None)
 
 log_file_name = 'logs/log-' + str(datetime.date.today()) + '.txt'
 
-url = 'http://localhost:5000/'
+app = Flask(__name__)
+socketio = SocketIO(app)
 
 all_nodes_data = {
-    0: ['000', 0, datetime.datetime.now(), time.time()], # master node
-    1: ['303', 0, datetime.datetime.now(), time.time()],
-    2: ['303', 0, datetime.datetime.now(), time.time()],
-    3: ['303', 0, datetime.datetime.now(), time.time()],
-    4: ['303', 0, datetime.datetime.now(), time.time()]
-    # [room_number, state, timestamp, timestamp in Unix format]
+    0: ['000', 0, time.time(), datetime.datetime.now()],  # master node
+    1: ['303', 0, time.time(), datetime.datetime.now()],
+    2: ['303', 0, time.time(), datetime.datetime.now()],
+    3: ['303', 0, time.time(), datetime.datetime.now()],
+    4: ['303', 0, time.time(), datetime.datetime.now()],
+    # [room_number, state, timestamp in Unix format, timestamp]
 }
 
 sample_packet = '000-0\n'
@@ -59,35 +64,56 @@ def establish_connection():
                 send_to_master('A')
                 break
 
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return render_template('/WebGUI.html')
+
+
+@socketio.on('event_response')
+def transmit_to_GUI(data):
+    socketio.emit('event_response', data, broadcast=True)
+    print "Sent to GUI!: ", data
+
+
+def read_and_transmit_to_GUI():
+    while True:
+        received_string = read_from_master()
+
+        if received_string is None:
+            continue
+
+        if len(received_string) == len(sample_packet) and received_string[3] == '-':
+            node_number, node_state = received_string.split('-')
+
+            print "Node number: " + node_number + ", state: " + node_state
+
+            node_number = int(node_number)
+            node_state = int(node_state)
+
+            node_data = all_nodes_data[node_number]
+            # node_data = [room_number, state, timestamp in Unix format, timestamp]
+
+            node_data[1] = node_state
+            node_data[2] = time.time()
+            node_data[3] = datetime.datetime.now()
+
+            all_nodes_data[node_number] = node_data
+
+            transmit_to_GUI(node_data[0:3])
+
+            with open(log_file_name, 'a') as log_file:
+                log_file.write('Node number: ' + str(node_number) + ', ' + str(node_data) + '\n')
+
 
 establish_connection()
 
 print "connection with master established!"
 
-while True:
-    received_string = read_from_master()
 
-    if received_string is None:
-        continue
+if __name__ == '__main__':
+    loop_thread = Thread(target=read_and_transmit_to_GUI)
+    loop_thread.setDaemon(True)
 
-    if len(received_string) == len(sample_packet) and received_string[3] == '-':
-        node_number, node_state = received_string.split('-')
+    loop_thread.start()
 
-        print "Node number: " + node_number + ", state: " + node_state
-
-        node_number = int(node_number)
-        node_state = int(node_state)
-
-        node_data = all_nodes_data[node_number]
-        # node_data = [room_number, state, timestamp, timestamp in Unix format]
-
-        node_data[1] = node_state
-        node_data[2] = datetime.datetime.now()
-        node_data[3] = time.time()
-
-        all_nodes_data[node_number] = node_data
-
-        with open(log_file_name, 'a') as log_file:
-            log_file.write('Node number: ' + str(node_number) + ', ' + str(node_data) + '\n')
-
-
+    socketio.run(app)
