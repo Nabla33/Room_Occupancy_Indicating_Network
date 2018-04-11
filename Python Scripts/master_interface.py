@@ -17,12 +17,12 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 
 all_nodes_data = {
-    0: ['000', 0, time.time(), datetime.datetime.now()],  # master node
-    1: ['303', 0, time.time(), datetime.datetime.now()],
-    2: ['303', 0, time.time(), datetime.datetime.now()],
-    3: ['303', 0, time.time(), datetime.datetime.now()],
-    4: ['303', 0, time.time(), datetime.datetime.now()],
-    # [room_number, state, timestamp in Unix format, timestamp]
+    0: [0, '000', 0, time.time(), datetime.datetime.now()],  # master node
+    1: [1, '303', 0, time.time(), datetime.datetime.now()],
+    2: [2, '303', 0, time.time(), datetime.datetime.now()],
+    3: [3, '303', 0, time.time(), datetime.datetime.now()],
+    4: [4, '303', 0, time.time(), datetime.datetime.now()],
+    # [node_number, room_number, state, timestamp in Unix format, timestamp]
 }
 
 sample_packet = '000-0\n'
@@ -91,18 +91,18 @@ def read_and_transmit_to_GUI():
             node_state = int(node_state)
 
             node_data = all_nodes_data[node_number]
-            # node_data = [room_number, state, timestamp in Unix format, timestamp]
+            # node_data = [node_number, room_number, state, timestamp in Unix format, timestamp]
 
-            node_data[1] = node_state
-            node_data[2] = time.time()
-            node_data[3] = datetime.datetime.now()
+            node_data[2] = node_state
+            node_data[3] = time.time()
+            node_data[4] = datetime.datetime.now()
 
             all_nodes_data[node_number] = node_data
 
-            transmit_to_GUI(node_data[0:3])
+            transmit_to_GUI(node_data[0:4])
 
             with open(log_file_name, 'a') as log_file:
-                log_file.write('Node number: ' + str(node_number) + ', ' + str(node_data) + '\n')
+                log_file.write('Room: ' + str(node_data[1]) + ', Node number: ' + str(node_data[0]) + ', ' + str(node_data) + '\n')
 
 
 establish_connection()

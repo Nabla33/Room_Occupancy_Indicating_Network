@@ -16,6 +16,8 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
 <script type="text/javascript" charset="utf-8">
+    var all_nodes_data = {};
+
     let socket = io.connect('http://' + document.domain + ':' + location.port);
     socket.on('connect', function() {
         socket.emit('my event', {data: 'I\'m connected!'});
@@ -24,8 +26,19 @@
     });
 
     socket.on('event_response', data => {
-        console.log(data)
+        console.log(data);
+        all_nodes_data[data[0].toString()] = data;
+        // node_data = [node_number, room_number, state, timestamp in Unix format
+
     });
+
+    var update;
+    (update = function() {
+        for (var key in all_nodes_data) {
+            //console.log(all_nodes_data[key]);
+        }
+    })();
+    setInterval(update, 1000);
 
 </script>
 
