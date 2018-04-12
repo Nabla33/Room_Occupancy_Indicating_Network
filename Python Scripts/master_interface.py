@@ -7,7 +7,7 @@ import serial
 import time
 import datetime
 
-port = "COM5"
+port = "COM3"
 baud = 115200
 ser = serial.Serial(port, baud, timeout=None)
 

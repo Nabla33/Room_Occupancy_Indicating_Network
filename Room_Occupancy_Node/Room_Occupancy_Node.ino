@@ -20,7 +20,7 @@
 
 int num_of_retries = MAX_RETRIES;
 
-#define DEBUG
+//#define DEBUG
 
 #ifdef DEBUG
     #define DEBUG_BEGIN(x)    Serial.begin(x)
@@ -56,9 +56,9 @@ RF24Mesh mesh(radio, network);
  * This will be stored in EEPROM on AVR devices, so remains persistent between further uploads, loss of power, etc.
  *
  **/
-#define node_ID 1
+#define node_ID 3
 
-char send_packet[] = "001-0\n";
+char send_packet[] = "003-0\n";
 
 struct payload_t {
         unsigned long ms;
@@ -141,6 +141,29 @@ void setup() {
     DEBUG_PRINTLN(F("Starting.."));
 
     mesh.begin();
+
+    current_sensor_state = digitalRead(sensor_pin);
+
+    if (current_sensor_state == HIGH)
+    	send_packet[4] = '1';
+    else
+    	send_packet[4] = '0';
+
+    while(!transmit_to_master(send_packet, 'M', sizeof(send_packet))){
+    	delay(500);
+    	num_of_retries--;
+
+    	if (num_of_retries == 0) {
+    		OLED_CLR();
+    		OLED_PRINTLN("Max retries");
+    		OLED_PRINTLN("exceeded!");
+
+    		DEBUG_PRINTLN("Max retries exceeded!");
+
+    		break;
+    	}
+    }
+
 
     OLED_CLR();
     OLED_PRINTLN("Standing");

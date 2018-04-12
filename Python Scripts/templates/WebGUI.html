@@ -18,56 +18,59 @@
     </p>
     <br>
 
+    <h3 align="center">Room: 303 </h3>
+    <br>
+
     <div class="container">
         <div class="row">
             <div class="col-sm">
                 <div id="node1" class="card text-center border-success">
                     <div class="card-header text-white bg-success">
                         <h3 class="card-title">Node 1</h3>
-                        <h7 class="card-subtitle">Active</h7>
+                        <i><h7 class="card-subtitle">Active</h7></i>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Activity:</p>
+                        <h6 class="card-text">Activity:</h6>
                         <h3 class="activity card-text text-success">Detected</h3>
                     </div>
                     <div class="card-footer text-right text-white bg-success">
-                        since 5 mins
+                        ---
                     </div>
                 </div>
             </div>
             <div class="col-sm">
                 <div id="node2" class="card text-center border-danger">
                     <div class="card-header text-white bg-danger">
-                        <h3 class="card-title">Node 1</h3>
-                        <h7 class="card-subtitle">Inactive</h7>
+                        <h3 class="card-title">Node 2</h3>
+                        <i><h7 class="card-subtitle">Active</h7></i>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Activity:</p>
+                        <h6 class="card-text">Activity:</h6>
                         <h3 class="activity card-text text-danger">None</h3>
                     </div>
                     <div class="card-footer text-right text-white bg-danger">
-                        since 5 mins
+                        ---
                     </div>
                 </div>
             </div>
             <div class="col-sm">
                 <div id="node3" class="card text-center border-default">
                     <div class="card-header bg-default">
-                        <h3 class="card-title">Node 1</h3>
-                        <h7 class="card-subtitle">Inactive</h7>
+                        <h3 class="card-title">Node 3</h3>
+                        <i><h7 class="card-subtitle">Inactive</h7></i>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Activity:</p>
+                        <h6 class="card-text">Activity:</h6>
                         <h3 class="activity card-text text-default">None</h3>
                     </div>
                     <div class="card-footer text-right bg-default">
-                        since 5 mins
+                        ---
                     </div>
                 </div>
             </div>
         </div>
         <br>
-        <div class="row">
+        <!--<div class="row">
                 <div class="col-sm">
                     <div id="node1" class="card text-center border-success">
                         <div class="card-header text-white bg-success">
@@ -113,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -134,56 +137,122 @@
             });
             document.getElementById("connection_status").innerText = " Connected";
             document.getElementById("connection_status").style = "color:#00ff00;"
+
+            setInactive('#node1');
+            setInactive('#node2');
+            setInactive('#node3');
+
         });
 
         socket.on('event_response', data => {
             console.log(data);
-            all_nodes_data[data[0].toString()] = data;
-            // node_data = [node_number, room_number, state, timestamp in Unix format
+            let node_number = data[0];
+            let node_state = data[2];
+            
+            all_nodes_data[node_number.toString()] = data;
+            // node_data = [node_number, room_number, state, timestamp in Unix format]
+
+            setActive('#node' + node_number.toString());
+            
+            if (node_state === 1) {
+                setActivity('#node' + node_number.toString())
+            }
+            else {
+                clearActivity('#node' + node_number.toString());
+            }
 
         });
 
         var update;
         (update = function () {
-            for (var key in all_nodes_data) {
+            for (let key in all_nodes_data) {
                 //console.log(all_nodes_data[key]);
+                let node_data = all_nodes_data[key];
+
+                let node_num = node_data[0];
+                let timestamp_moment = moment.unix(node_data[3]);
+                let timeFromNow = timestamp_moment.fromNow();
+
+                updateTime('#node' + node_num.toString(), timeFromNow);
+
             }
         })();
         setInterval(update, 1000);
 
         function setActive(node) {
             // Change styling
-            $("#node3").removeClass("border-danger").addClass("border-success");
-            $("#node3 .card-header")
-                .removeClass("bg-danger")
-                .addClass("bg-success text-white");
-            $("#node3 .card-subtitle").text("Inactive");
-            $("#node3 .activity")
-                .removeClass("text-danger")
-                .addClass("text-success").text("Detected");
-            $("#node3 .card-footer")
-                .removeClass("bg-danger")
-                .addClass("bg-success text-white");
 
-            // TODO: Change data
+            $(node).removeClass("border-default").addClass("border-danger");
+            $(node + ' .card-header')
+                .removeClass("bg-default")
+                .addClass("bg-danger text-white");
+            $(node + ' .card-subtitle').text("Active");
+            $(node + ' .activity')
+                .removeClass("text-default")
+                .addClass("text-danger").text("None");
+            $(node + ' .card-footer')
+                .removeClass("bg-default")
+                .addClass("bg-danger text-white");
+
         }
 
         function setInactive(node) {
             // Change styling
-            $("#node3").removeClass("border-success").addClass("border-danger");
-            $("#node3 .card-header")
+            $(node).removeClass("border-success").removeClass("border-danger").addClass("border-default");
+            $(node + ' .card-header')
+                .removeClass("bg-success")
+                .removeClass("bg-danger")
+                .removeClass("text-white")
+                .addClass("bg-default");
+            $(node + ' .card-subtitle').text("Inactive");
+            $(node + ' .activity')
+                .removeClass("text-success")
+                .removeClass("text-danger")
+                .addClass("text-default").text("None");
+            $(node + ' .card-footer')
+                .removeClass("bg-success")
+                .removeClass("bg-danger")
+                .removeClass("text-white")
+                .addClass("bg-default")
+                .text("---");
+
+        }
+
+        function setActivity(node) {
+
+            $(node).removeClass("border-danger").addClass("border-success");
+            $(node + ' .card-header')
+                .removeClass("bg-danger")
+                .addClass("bg-success text-white");
+            $(node + ' .activity')
+                .removeClass("text-danger")
+                .addClass("text-success").text("Detected");
+            $(node + ' .card-footer')
+                .removeClass("bg-danger")
+                .addClass("bg-success text-white");
+
+        }
+
+        function clearActivity(node) {
+
+            $(node).removeClass("border-success").addClass("border-danger");
+            $(node + ' .card-header')
                 .removeClass("bg-success")
                 .addClass("bg-danger text-white");
-            $("#node3 .card-subtitle").text("Inactive");
-            $("#node3 .activity")
+            $(node + ' .activity')
                 .removeClass("text-success")
-                .addClass("text-danger").text("Detected");
-            $("#node3 .card-footer")
+                .addClass("text-danger").text("None");
+            $(node + ' .card-footer')
                 .removeClass("bg-success")
                 .addClass("bg-danger text-white");
 
-            // TODO: Change data
         }
+
+        function updateTime(node, timeFromNow) {
+            $(node + ' .card-footer').text('State changed ' + timeFromNow);
+        }
+
+
     </script>
 </body>
 
