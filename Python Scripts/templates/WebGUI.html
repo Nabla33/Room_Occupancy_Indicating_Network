@@ -2,44 +2,189 @@
 
 <html>
 
-<title> Room Occupancy Indicating System
-</title>
+<head>
+    <title> Room Occupancy Indicating System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
 
 <body>
-<! <meta http-equiv="refresh" content="1">
-   
-<p><strong>Status:<span id="connection_status" style="color:#ff0000;"> Not Connected </span></strong></p>
-<br>
-</body>
+    <! <meta http-equiv="refresh" content="1">
 
+    <p>
+        <strong>Status:
+            <span id="connection_status" style="color:#ff0000;"> Not Connected </span>
+        </strong>
+    </p>
+    <br>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
-<script type="text/javascript" charset="utf-8">
-    var all_nodes_data = {};
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div id="node1" class="card text-center border-success">
+                    <div class="card-header text-white bg-success">
+                        <h3 class="card-title">Node 1</h3>
+                        <h7 class="card-subtitle">Active</h7>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Activity:</p>
+                        <h3 class="activity card-text text-success">Detected</h3>
+                    </div>
+                    <div class="card-footer text-right text-white bg-success">
+                        since 5 mins
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div id="node2" class="card text-center border-danger">
+                    <div class="card-header text-white bg-danger">
+                        <h3 class="card-title">Node 1</h3>
+                        <h7 class="card-subtitle">Inactive</h7>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Activity:</p>
+                        <h3 class="activity card-text text-danger">None</h3>
+                    </div>
+                    <div class="card-footer text-right text-white bg-danger">
+                        since 5 mins
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div id="node3" class="card text-center border-default">
+                    <div class="card-header bg-default">
+                        <h3 class="card-title">Node 1</h3>
+                        <h7 class="card-subtitle">Inactive</h7>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Activity:</p>
+                        <h3 class="activity card-text text-default">None</h3>
+                    </div>
+                    <div class="card-footer text-right bg-default">
+                        since 5 mins
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+                <div class="col-sm">
+                    <div id="node1" class="card text-center border-success">
+                        <div class="card-header text-white bg-success">
+                            <h3 class="card-title">Node 1</h3>
+                            <h7 class="card-subtitle">Active</h7>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Activity:</p>
+                            <h3 class="activity card-text text-success">Detected</h3>
+                        </div>
+                        <div class="card-footer text-right text-white bg-success">
+                            since 5 mins
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div id="node2" class="card text-center border-danger">
+                        <div class="card-header text-white bg-danger">
+                            <h3 class="card-title">Node 1</h3>
+                            <h7 class="card-subtitle">Inactive</h7>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Activity:</p>
+                            <h3 class="activity card-text text-danger">None</h3>
+                        </div>
+                        <div class="card-footer text-right text-white bg-danger">
+                            since 5 mins
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div id="node3" class="card text-center border-default">
+                        <div class="card-header bg-default">
+                            <h3 class="card-title">Node 1</h3>
+                            <h7 class="card-subtitle">Inactive</h7>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Activity:</p>
+                            <h3 class="activity card-text text-default">None</h3>
+                        </div>
+                        <div class="card-footer text-right bg-default">
+                            since 5 mins
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
 
-    let socket = io.connect('http://' + document.domain + ':' + location.port);
-    socket.on('connect', function() {
-        socket.emit('my event', {data: 'I\'m connected!'});
-        document.getElementById("connection_status").innerText = " Connected";
-        document.getElementById("connection_status").style = "color:#00ff00;"
-    });
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var all_nodes_data = {};
 
-    socket.on('event_response', data => {
-        console.log(data);
-        all_nodes_data[data[0].toString()] = data;
-        // node_data = [node_number, room_number, state, timestamp in Unix format
+        let socket = io.connect('http://' + document.domain + ':' + location.port);
+        socket.on('connect', function () {
+            socket.emit('my event', {
+                data: 'I\'m connected!'
+            });
+            document.getElementById("connection_status").innerText = " Connected";
+            document.getElementById("connection_status").style = "color:#00ff00;"
+        });
 
-    });
+        socket.on('event_response', data => {
+            console.log(data);
+            all_nodes_data[data[0].toString()] = data;
+            // node_data = [node_number, room_number, state, timestamp in Unix format
 
-    var update;
-    (update = function() {
-        for (var key in all_nodes_data) {
-            //console.log(all_nodes_data[key]);
+        });
+
+        var update;
+        (update = function () {
+            for (var key in all_nodes_data) {
+                //console.log(all_nodes_data[key]);
+            }
+        })();
+        setInterval(update, 1000);
+
+        function setActive(node) {
+            // Change styling
+            $("#node3").removeClass("border-danger").addClass("border-success");
+            $("#node3 .card-header")
+                .removeClass("bg-danger")
+                .addClass("bg-success text-white");
+            $("#node3 .card-subtitle").text("Inactive");
+            $("#node3 .activity")
+                .removeClass("text-danger")
+                .addClass("text-success").text("Detected");
+            $("#node3 .card-footer")
+                .removeClass("bg-danger")
+                .addClass("bg-success text-white");
+
+            // TODO: Change data
         }
-    })();
-    setInterval(update, 1000);
 
-</script>
+        function setInactive(node) {
+            // Change styling
+            $("#node3").removeClass("border-success").addClass("border-danger");
+            $("#node3 .card-header")
+                .removeClass("bg-success")
+                .addClass("bg-danger text-white");
+            $("#node3 .card-subtitle").text("Inactive");
+            $("#node3 .activity")
+                .removeClass("text-success")
+                .addClass("text-danger").text("Detected");
+            $("#node3 .card-footer")
+                .removeClass("bg-success")
+                .addClass("bg-danger text-white");
+
+            // TODO: Change data
+        }
+    </script>
+</body>
 
 </html>
