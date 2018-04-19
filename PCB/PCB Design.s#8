@@ -18384,8 +18384,6 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="JP4" gate="A" pin="1"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="-76.2" y1="15.24" x2="-68.58" y2="15.24" width="0.1524" layer="91"/>
-<junction x="-76.2" y="15.24"/>
-<wire x1="-76.2" y1="15.24" x2="-86.36" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PB6/CRYSTAL1" class="0">
@@ -18447,8 +18445,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-71.12" y1="17.78" x2="-76.2" y2="17.78" width="0.1524" layer="91"/>
 <label x="-71.12" y="17.78" size="1.27" layer="95" xref="yes"/>
 <pinref part="JP4" gate="A" pin="2"/>
-<junction x="-76.2" y="17.78"/>
-<wire x1="-86.36" y1="17.78" x2="-76.2" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PC4/A4/SDA" class="0">
@@ -18461,8 +18457,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-71.12" y1="20.32" x2="-76.2" y2="20.32" width="0.1524" layer="91"/>
 <label x="-71.12" y="20.32" size="1.27" layer="95" xref="yes"/>
 <pinref part="JP4" gate="A" pin="3"/>
-<junction x="-76.2" y="20.32"/>
-<wire x1="-86.36" y1="20.32" x2="-76.2" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PC5/A5/SCL" class="0">
@@ -18475,8 +18469,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-71.12" y1="22.86" x2="-76.2" y2="22.86" width="0.1524" layer="91"/>
 <label x="-71.12" y="22.86" size="1.27" layer="95" xref="yes"/>
 <pinref part="JP4" gate="A" pin="4"/>
-<junction x="-76.2" y="22.86"/>
-<wire x1="-86.36" y1="22.86" x2="-76.2" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PC6/RESET" class="0">
@@ -18798,8 +18790,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-71.12" y1="25.4" x2="-76.2" y2="25.4" width="0.1524" layer="91"/>
 <label x="-71.12" y="25.4" size="1.27" layer="95" xref="yes"/>
 <pinref part="JP4" gate="A" pin="5"/>
-<junction x="-76.2" y="25.4"/>
-<wire x1="-86.36" y1="25.4" x2="-76.2" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

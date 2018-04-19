@@ -3650,7 +3650,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="SPICEPREFIX" value="C" x="33.274" y="11.319" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="33.396" y="9.557" size="1.016" layer="27" rot="R90"/>
 </element>
-<element name="Q1" library="crystal" library_urn="urn:adsk.eagle:library:204" package="HC49U70" package3d_urn="urn:adsk.eagle:package:12079/1" value="16MHz" x="30.861" y="16.129" smashed="yes">
+<element name="Q1" library="crystal" library_urn="urn:adsk.eagle:library:204" package="HC49U70" package3d_urn="urn:adsk.eagle:package:12079/1" value="8MHz" x="30.861" y="16.129" smashed="yes">
 <attribute name="MF" value="" x="-14.859" y="41.529" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-14.859" y="41.529" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-14.859" y="41.529" size="1.778" layer="27" display="off"/>

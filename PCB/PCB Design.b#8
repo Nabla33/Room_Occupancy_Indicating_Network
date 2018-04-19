@@ -53,7 +53,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
@@ -437,10 +437,14 @@
 <rectangle x1="18.3007" y1="12.3825" x2="21.9583" y2="12.4587" layer="21"/>
 <rectangle x1="13.3477" y1="12.4587" x2="17.9959" y2="12.5349" layer="21"/>
 <rectangle x1="18.3007" y1="12.4587" x2="21.9583" y2="12.5349" layer="21"/>
-<wire x1="57.023" y1="2.286" x2="11.049" y2="2.286" width="0.254" layer="20"/>
-<wire x1="11.049" y1="2.286" x2="11.049" y2="44.196" width="0.254" layer="20"/>
+<wire x1="57.023" y1="1.143" x2="11.049" y2="1.143" width="0.254" layer="20"/>
+<wire x1="11.049" y1="1.143" x2="11.049" y2="44.196" width="0.254" layer="20"/>
 <wire x1="11.049" y1="44.196" x2="57.023" y2="44.196" width="0.254" layer="20"/>
-<wire x1="57.023" y1="44.196" x2="57.023" y2="2.286" width="0.254" layer="20"/>
+<wire x1="57.023" y1="44.196" x2="57.023" y2="1.143" width="0.254" layer="20"/>
+<hole x="12.446" y="42.799" drill="1"/>
+<hole x="55.626" y="42.799" drill="1"/>
+<hole x="55.626" y="2.54" drill="1"/>
+<hole x="12.446" y="2.54" drill="1"/>
 </plain>
 <libraries>
 <library name="Atmel_By_element14_Batch_1-00">
@@ -3769,16 +3773,16 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="JP1" pad="2"/>
 <contactref element="JP2" pad="1"/>
 <polygon width="0.3048" layer="16">
-<vertex x="56.515" y="2.794"/>
-<vertex x="11.557" y="2.794"/>
+<vertex x="56.515" y="1.651"/>
+<vertex x="11.557" y="1.651"/>
 <vertex x="11.557" y="43.688"/>
 <vertex x="56.515" y="43.688"/>
 </polygon>
 <polygon width="0.3048" layer="1">
 <vertex x="56.515" y="43.688"/>
 <vertex x="11.557" y="43.688"/>
-<vertex x="11.557" y="2.794"/>
-<vertex x="56.515" y="2.794"/>
+<vertex x="11.557" y="1.651"/>
+<vertex x="56.515" y="1.651"/>
 </polygon>
 <via x="28.702" y="27.813" extent="1-16" drill="0.35"/>
 <contactref element="JP4" pad="1"/>

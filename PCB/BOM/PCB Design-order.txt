@@ -1,0 +1,22 @@
+Order list for C:/Users/Chirag/Desktop/ROIS/Room_Occupancy_Indicating_Network/PCB/PCB Design.sch
+Exported from EAGLE with DesignLink
+
+Quantity	Value	Package	Order code	Manufacturer	Manuf. Code	Availability	Price (from)	Description
+1	ATMEGA328P-AU	QFP80P900X900X120-32N	1715486	MICROCHIP	ATMEGA328P-AU	7162	115.52	MICROCHIP - ATMEGA328P-AU - MCU, 8BIT, ATMEGA, 20MHZ, TQFP-32
+2	.1uF	C0805K	unknown					
+2	1uf	E2,5-5	unknown					
+1	0.33µF	C0805K	unknown					
+2	22pF	C0805K	unknown					
+1	470pF	C0805K	unknown					
+2	250mA/100V	SOD-323	1890445	SCHMERSAL	BNS33-11ZG-3M	21	3642.02	SCHMERSAL - BNS33-11ZG-3M - SWITCH, SAFETY, MAGNETIC
+2		1X02	unknown					
+1		1X05	unknown					
+1		2X04	unknown					
+1		1X07	unknown					
+1		1X03	unknown					
+1	8MHz	HC49U70	unknown					
+2	10k	M0805	unknown					
+1		B3F-10XX	176432	OMRON ELECTRONIC COMPONENTS	B3F-1000	34807	14.54	OMRON ELECTRONIC COMPONENTS - B3F-1000 - SWITCH, SPNO, 0.05A, 24V, THT, 0.98N
+1	6_PIN_SERIAL_CABLEPTH	FTDI_BASIC	unknown					
+1	TC1014	SOT23-5	unknown					
+1	AVR_SPI_PROG_5X2PTH2	2X5-SHROUDED	unknown					
