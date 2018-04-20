@@ -9,6 +9,7 @@
 \usepackage{textcomp}
 \usepackage{pdfpages}
 \usepackage{caption}
+\usepackage{hyperref} %packagr for hyperlinks
 \pagenumbering{Roman}
 %\floatstyle{boxed}
 %\restylefloat{figure}
@@ -20,7 +21,14 @@
 %\footheight 18mm 
 %\footskip 18mm
 \bibliographystyle{plain}
-%
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=red,
+	urlcolor= cyan,
+}
+\urlstyle{same}
 
 \captionsetup[figure]{font=small}
 \graphicspath{{images/}}
