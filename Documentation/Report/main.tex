@@ -1,0 +1,57 @@
+\documentclass[12pt,oneside,a4paper,graphicx]{report}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{caption}
+\pagenumbering{Roman}
+%\floatstyle{boxed}
+%\restylefloat{figure}
+%\topmargin 18mm
+\textwidth 6.5in
+%\headheight -8pt
+%\headsep -12pt
+\textheight 9.5in
+%\footheight 18mm 
+%\footskip 18mm
+\bibliographystyle{plain}
+%
+
+\captionsetup[figure]{font=small}
+\graphicspath{{images/}}
+
+\newcommand*{\captionsource}[2]{%
+  \caption[{#1}]{%
+    #1%, %
+    , Source: #2%
+  }%
+}
+
+\begin{document}
+\input{title}
+%\input{certificate}
+\input{certificatea}
+\input{abstract}
+\input{acknowledgement}
+\pagenumbering{Roman}
+%\pagenumbering{}
+\tableofcontents
+\pagebreak
+\listoffigures
+\pagebreak
+\pagenumbering{arabic}
+\input{introduction}
+\input{literature}
+\input{prjctobj}
+\input{implementation}
+\input{system}
+\input{software}
+\input{results}
+\input{conclusion}
+\input{bibliography}
+\end{document}
