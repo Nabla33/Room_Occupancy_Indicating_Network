@@ -1,0 +1,18 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Hypothesis}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Market Survey}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Workscape}{chapter.3}% 4
+\BOOKMARK [1][-]{section.3.2}{OccupEye}{chapter.3}% 5
+\BOOKMARK [0][-]{chapter.4}{Implementation and Build}{}% 6
+\BOOKMARK [1][-]{section.4.1}{Designing and Prototyping}{chapter.4}% 7
+\BOOKMARK [2][-]{subsection.4.1.1}{Radio Module Selection}{section.4.1}% 8
+\BOOKMARK [2][-]{subsection.4.1.2}{Low Power Considerations}{section.4.1}% 9
+\BOOKMARK [1][-]{section.4.2}{PCB Design}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.3}{3D Modelling and Print}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.4}{Interface with Master Node and Web-GUI}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Results}{}% 13
+\BOOKMARK [0][-]{chapter.6}{Next Steps}{}% 14
+\BOOKMARK [1][-]{section.6.1}{Testing with increased number of nodes}{chapter.6}% 15
+\BOOKMARK [1][-]{section.6.2}{Mobile Application}{chapter.6}% 16
+\BOOKMARK [1][-]{section.6.3}{Implementation at Fractal Analytics}{chapter.6}% 17
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 18

@@ -33,15 +33,25 @@ When motion is detected the device wakes up from its deep sleep state using inte
 \end{itemize}
 
 \section{PCB Design}
+The board has the following features
+\begin{itemize}
+	\item Programming interface for both serial (Arduino) as well as ISP programming
+	\item Headers for RTC, NRF radio module and Oled display
+	\item Onboard LDO and ultra low quiescent current voltage regulator for battery supply (TC1014-3.0V)
+\end{itemize}
 
-Designed the PCB of the circuit in Eagle and got it manufactured from a PCB prototyping service (PCBway.com)
+We used the smallest footprint components which was practical to hand assemble so that we could make the device smaller. All the resistors and capacitors are of 0805 package, ATmega is TQFP package, the voltage regulator is SOT-5 package.
+We needed to make multiple such boards.
+Hence for these reasons we decided to get the PCBs professionally manufactured from a PCB prototyping service (PCBway.com).
 
-\includegraphics[scale=0.25]{EaglePCB.png}
+\begin{center}
+	\includegraphics[scale=0.31]{EaglePCB.png}
+	\includegraphics[scale=0.075]{PCB_1.jpg}
+	
+	\includegraphics[scale=0.05]{PCB_2.jpg}
+	\includegraphics[scale=0.05]{PCB_3.jpg}
+\end{center}
 
-\includegraphics[scale=0.1]{PCB_1.jpg}
-
-\includegraphics[scale=0.05]{PCB_2.jpg}
-\includegraphics[scale=0.05]{PCB_3.jpg}
 
 \section{3D Modelling and Print}
 Any electronics project is incomplete without a proper enclosure to go with it. Normally we would have built something manually out of acrylic sheets or cardboard, but recently the institute had purchased a 3D printer, and we had multiple nodes to work with, so 3D printing an enclosure was the best option. 
@@ -49,8 +59,12 @@ We designed the 3D models by mainly taking the PCB, RF module and battery into c
 After the design process, the model was exported as .stl files and sent to the printer for 3D printing. The first print of the base part failed due to a nozzle clog in the 3D printer. The second print was a success and the print turned out well, with all components falling in perfectly. Next we went ahead and printed the top half of the enclosure and it was a success as well.
 The end result was a neat and aesthetically pleasing which gave the sensor nodes a product-like professional look.
 
-\includegraphics[scale=0.25]{model.png}
-\includegraphics[scale=0.25]{modelling_process.png}
+\begin{center}
+	\includegraphics[scale=0.25]{model.png}
+	\\
+	\includegraphics[scale=0.25]{modelling_process.png}
+\end{center}
+
 
 \section{Interface with Master Node and Web-GUI}
 All packets sent from each sensor node are eventually routed to the master node, which relays it to the computer maintaining the web server. The interface between the master node and the computer is done Serially, at a baud rate of 115200 bps. The computer runs a Python script which receives all the sensor data and updates the data on the web server, which displays it to the client (browser). Timestamps are passed between the the web server and client in Unix Epoch format, while a more precise timestamp is logged locally to a text file. 
