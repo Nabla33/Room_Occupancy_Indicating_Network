@@ -50,6 +50,8 @@ Hence for these reasons we decided to get the PCBs professionally manufactured f
 	
 	\includegraphics[scale=0.05]{PCB_2.jpg}
 	\includegraphics[scale=0.05]{PCB_3.jpg}
+	
+	\includegraphics[scale=0.09]{AssemPCB1.jpg}
 \end{center}
 
 
@@ -63,8 +65,10 @@ The end result was a neat and aesthetically pleasing which gave the sensor nodes
 	\includegraphics[scale=0.25]{model.png}
 	\\
 	\includegraphics[scale=0.25]{modelling_process.png}
+	
+	\includegraphics[scale=0.065]{3DPrint.jpg}
+	\includegraphics[scale=0.05]{AssemPCB2.jpg}
 \end{center}
-
 
 \section{Interface with Master Node and Web-GUI}
 All packets sent from each sensor node are eventually routed to the master node, which relays it to the computer maintaining the web server. The interface between the master node and the computer is done Serially, at a baud rate of 115200 bps. The computer runs a Python script which receives all the sensor data and updates the data on the web server, which displays it to the client (browser). Timestamps are passed between the the web server and client in Unix Epoch format, while a more precise timestamp is logged locally to a text file. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.20)  21 APR 2018 01:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.20)  21 APR 2018 01:46
 entering extended mode
 **./main.tex
 (main.tex
@@ -611,31 +611,22 @@ Package pdftex.def Info: images/Workscape2.png  used on input line 28.
 <images/HotColdDeskOccupEye.png, id=144, 853.1875pt x 232.87pt>
 File: images/HotColdDeskOccupEye.png Graphic file (type png)
 <use images/HotColdDeskOccupEye.png>
-Package pdftex.def Info: images/HotColdDeskOccupEye.png  used on input line 40.
+Package pdftex.def Info: images/HotColdDeskOccupEye.png  used on input line 42.
 
 (pdftex.def)             Requested size: 213.29636pt x 58.21735pt.
-<images/OccupEyeReceiver.png, id=145, 626.34pt x 478.78876pt>
-File: images/OccupEyeReceiver.png Graphic file (type png)
-<use images/OccupEyeReceiver.png>
-Package pdftex.def Info: images/OccupEyeReceiver.png  used on input line 41.
-(pdftex.def)             Requested size: 156.58461pt x 119.69688pt.
-<images/OccupEyedeployment.png, id=146, 1327.96124pt x 322.20375pt>
+<images/OccupEyedeployment.png, id=145, 1327.96124pt x 322.20375pt>
 File: images/OccupEyedeployment.png Graphic file (type png)
 <use images/OccupEyedeployment.png>
-Package pdftex.def Info: images/OccupEyedeployment.png  used on input line 42.
+Package pdftex.def Info: images/OccupEyedeployment.png  used on input line 44.
 (pdftex.def)             Requested size: 331.9895pt x 80.55074pt.
+<images/OccupEyeReceiver.png, id=146, 626.34pt x 478.78876pt>
+File: images/OccupEyeReceiver.png Graphic file (type png)
+<use images/OccupEyeReceiver.png>
+Package pdftex.def Info: images/OccupEyeReceiver.png  used on input line 46.
+(pdftex.def)             Requested size: 156.58461pt x 119.69688pt.
 ) (Implementation.tex
-Overfull \hbox (254.96246pt too wide) in paragraph at lines 40--1
-[][] [] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--1
-
- []
-
-[4 <./images/HotColdDeskOccupEye.png> <./images/OccupEyeReceiver.png> <./images
-/OccupEyedeployment.png>]
+[4 <./images/HotColdDeskOccupEye.png> <./images/OccupEyedeployment.png> <./imag
+es/OccupEyeReceiver.png>]
 Chapter 4.
 <images/Breadboard.jpg, id=154, 4175.6pt x 2348.775pt>
 File: images/Breadboard.jpg Graphic file (type jpg)
@@ -671,41 +662,57 @@ File: images/PCB_3.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/PCB_3.jpg  used on input line 52.
 (pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
  [6 <./images/EaglePCB.png> <./images/PCB_1.jpg>]
-<images/model.png, id=170, 1445.4pt x 782.925pt>
+<images/AssemPCB1.jpg, id=170, 2851.65375pt x 2138.99126pt>
+File: images/AssemPCB1.jpg Graphic file (type jpg)
+<use images/AssemPCB1.jpg>
+Package pdftex.def Info: images/AssemPCB1.jpg  used on input line 54.
+(pdftex.def)             Requested size: 256.63776pt x 192.5009pt.
+<images/model.png, id=171, 1445.4pt x 782.925pt>
 File: images/model.png Graphic file (type png)
 <use images/model.png>
-Package pdftex.def Info: images/model.png  used on input line 63.
+Package pdftex.def Info: images/model.png  used on input line 65.
 (pdftex.def)             Requested size: 361.34912pt x 195.73077pt.
-<images/modelling_process.png, id=171, 1443.14156pt x 782.925pt>
+ [7 <./images/PCB_2.jpg> <./images/PCB_3.jpg> <./images/AssemPCB1.jpg>]
+<images/modelling_process.png, id=176, 1443.14156pt x 782.925pt>
 File: images/modelling_process.png Graphic file (type png)
 <use images/modelling_process.png>
-Package pdftex.def Info: images/modelling_process.png  used on input line 65.
+Package pdftex.def Info: images/modelling_process.png  used on input line 67.
 (pdftex.def)             Requested size: 360.7845pt x 195.73077pt.
- [7 <./images/PCB_2.jpg> <./images/PCB_3.jpg> <./images/model.png>]
-<images/Website1.png, id=176, 1156.32pt x 469.15276pt>
+<images/3DPrint.jpg, id=177, 2683.02374pt x 2011.515pt>
+File: images/3DPrint.jpg Graphic file (type jpg)
+<use images/3DPrint.jpg>
+Package pdftex.def Info: images/3DPrint.jpg  used on input line 69.
+(pdftex.def)             Requested size: 174.40266pt x 130.75307pt.
+<images/AssemPCB2.jpg, id=178, 3559.2975pt x 2668.97125pt>
+File: images/AssemPCB2.jpg Graphic file (type jpg)
+<use images/AssemPCB2.jpg>
+Package pdftex.def Info: images/AssemPCB2.jpg  used on input line 70.
+(pdftex.def)             Requested size: 177.9753pt x 133.45638pt.
+ [8 <./images/model.png> <./images/modelling_process.png> <./images/3DPrint.jpg
+> <./images/AssemPCB2.jpg>]
+<images/Website1.png, id=184, 1156.32pt x 469.15276pt>
 File: images/Website1.png Graphic file (type png)
 <use images/Website1.png>
-Package pdftex.def Info: images/Website1.png  used on input line 77.
+Package pdftex.def Info: images/Website1.png  used on input line 81.
 (pdftex.def)             Requested size: 289.07928pt x 117.28789pt.
-<images/Website2.png, id=177, 1156.32pt x 476.37975pt>
+<images/Website2.png, id=185, 1156.32pt x 476.37975pt>
 File: images/Website2.png Graphic file (type png)
 <use images/Website2.png>
-Package pdftex.def Info: images/Website2.png  used on input line 78.
+Package pdftex.def Info: images/Website2.png  used on input line 82.
 (pdftex.def)             Requested size: 289.07928pt x 119.09464pt.
-<images/Website3.png, id=178, 1154.51324pt x 498.06075pt>
+<images/Website3.png, id=186, 1154.51324pt x 498.06075pt>
 File: images/Website3.png Graphic file (type png)
 <use images/Website3.png>
-Package pdftex.def Info: images/Website3.png  used on input line 79.
+Package pdftex.def Info: images/Website3.png  used on input line 83.
 (pdftex.def)             Requested size: 288.62761pt x 124.51488pt.
 ) (Results.tex
-Overfull \hbox (128.63948pt too wide) in paragraph at lines 77--1
+Overfull \hbox (128.63948pt too wide) in paragraph at lines 81--1
 [][] []
  []
 
-[8 <./images/modelling_process.png> <./images/Website1.png> <./images/Website2.
-png>] [9 <./images/Website3.png>]
+[9 <./images/Website1.png> <./images/Website2.png> <./images/Website3.png>]
 Chapter 5.
-<images/FinalProduct.jpg, id=191, 4625.28pt x 3468.96pt>
+<images/FinalProduct.jpg, id=194, 4625.28pt x 3468.96pt>
 File: images/FinalProduct.jpg Graphic file (type jpg)
 <use images/FinalProduct.jpg>
 Package pdftex.def Info: images/FinalProduct.jpg  used on input line 7.
@@ -739,10 +746,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 8870 strings out of 493305
- 136526 string characters out of 3129367
+ 8885 strings out of 493305
+ 136852 string characters out of 3129367
  217387 words of memory out of 3000000
- 12198 multiletter control sequences out of 15000+200000
+ 12210 multiletter control sequences out of 15000+200000
  13295 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,8n,39p,661b,410s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -757,9 +764,9 @@ b><C:/Users/Chirag/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr12.pfb><C:/Users/Chirag/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmti10.pfb><C:/Users/Chirag/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (19 pages, 21663735 bytes).
+Output written on main.pdf (19 pages, 25236158 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
+ 270 PDF objects out of 1000 (max. 8388607)
  46 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 
