@@ -35,7 +35,6 @@ def send_to_master(string):
     else:
         print "Send-Serial not open!"
 
-
 def read_from_master(timeout_at=1):
     received = None
     timeout_time = time.clock() + timeout_at
@@ -54,7 +53,6 @@ def read_from_master(timeout_at=1):
         print "Read-Serial not open!"
 
     return received
-
 
 def establish_connection():
     while True:
@@ -82,8 +80,9 @@ def read_and_transmit_to_GUI():
         if received_string is None:
             continue
 
+
         if len(received_string) == len(sample_packet) and received_string[3] == '-':
-            node_number, node_state = received_string.split('-')
+            node_number, node_state = received_string.split('-')    #Split received data into node number and state
 
             print "Node number: " + node_number + ", state: " + node_state
 

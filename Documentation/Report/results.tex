@@ -2,30 +2,34 @@
 %The following images show the result of mapping using handheld Kinect:
 
 \begin{figure}[ht]
-\begin{center}
-
-\includegraphics[scale=.1]{FinalProduct.jpg}
-
-%\caption{Final Mapping}
-
-%\label{fig:Final}
-\end{center}
+	\begin{center}
+		
+		\includegraphics[scale=.075]{FinalProduct.jpg}
+		
+		\caption{Final Assembled Device}
+		%\label{fig:Final}
+		
+		\end{center}
 \end{figure}
 
-%\par The small section on the botoom left corener shows the RGB stream from the Kinect and the formed 3D map is displayed at the center.
+The devices have been configured in a tree network setup. All the end nodes stay in a deep sleep state. They wake up only when a change of state in the PIR sensor is detected or when the WDT overflows. 
 
-\newpage 
+When motion is detected the device wakes up from its deep sleep state using interrupts and then transmits the required information and goes back to its deep sleep state. 
+The devices also periodically wake up and send the state when the WDT overflows. This is so that if a device fails the master can sense that the device hasn't transmitted anything recently and then that device can be marked offline by the user.
 
-\begin{figure}[ht]
+The routers are always awake and listening so that they can route information between the devices and the master whenever required. They can be battery powered or can be powered using a mains adapter.
+
 \begin{center}
-
-\includegraphics[scale=0.25]{Website1.png}
-\caption{Website}
-
-\label{fig:Site2}
+	\includegraphics[scale=.17]{TreeNW.jpg}
+	
+	Tree network topology
 \end{center}
-\end{figure}
 
-\par Real time occupancy status can be seen 
+\begin{center}
+	\includegraphics[scale=0.25]{Website1.png}
+	\\Website
+\end{center}
+
+Real time occupancy status can be seen 
 
 
