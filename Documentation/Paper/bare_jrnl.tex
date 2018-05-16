@@ -35,9 +35,9 @@ For testing purposes, we have designed the prototype of the circuit on breadboar
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.05]{all_breadboards.jpg}
+	\includegraphics[scale=0.06]{all_breadboards.jpg}
 	\caption{The 4 breadboard prototypes}
-	\label{fig_bb}
+	\label{fig_sim}
 \end{figure}
 
 \subsection{PCBs}
@@ -45,57 +45,45 @@ Later we created PCBs using Autodesk Eagle and had it manufactured so that each 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.06]{PCB_1.jpg}
+	\includegraphics[scale=0.06]{1.jpg}
 	\caption{The PCB created}
-	\label{fig_pcb}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.03]{1__30_.jpg}
-	\caption{The PCB assembled}
-	\label{fig_pcb}
+	\label{fig_sim}
 \end{figure}
 
 \subsection{Enclosure}
 The enclosure was designed on Autodesk Fusion 360 and 3D printed for a professional look.
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.06]{3DPrint.jpg}
-	\caption{Node base under print}
-	\label{fig_print}
-\end{figure}
 
 \section{Results}
-The end result was neat and aesthetically pleasing which gave the sensor nodes a product-like professional look. Real-time room occupancy can be seen on node by node basis on the Web-GUI.
+A frame rate of 20-25 fps is obtained when the Kinect is connected to the laptop, RTAB-Map does the mapping and RTAB-Mapviz/RViz visualizes the map. 
+
+3-4 fps is obtained when the kinect is connected to the Raspberry Pi and mapping is done by it and the map is visualized on the laptop. The data stream from the Kinect has to be divided by two to allow the RPi to process it fast enough. RPi requires 80-100kbps bandwidth for transmitting the map over the network to the laptop.
+
+\begin{figure}[ht]
+\centering
+\caption{Mapping with kinect connected to a laptop}
+\label{fig_sim}
+\end{figure}
+ 
+\begin{figure}[ht]
+	\centering
+	\caption{Mapping with kinect connected to a laptop}
+	\label{fig_sim}
+\end{figure}
+
+\newpage
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.04]{FinalProduct.jpg}
-	\caption{The Final Outcome}
-	\label{fig_print}
+	\caption{Wireless Mapping with kinect connected to a Raspberry Pi 2}
+	\label{fig_sim}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.2]{Website1.PNG}
-	\caption{The Web-GUI}
-	\label{fig_print}
+	\caption{Wireless Mapping with kinect connected to a Raspberry Pi 2}
+	\label{fig_sim}
 \end{figure}
-
-\section{Future Scope}
-
-\subsection{Testing with increased number of nodes}
-Increasing the number of networked devices poses many challenges such as handling the require amount of connections, handling packet losses, planning deep sleep timings, etc and also may create some other unforeseen problems. This has to be tested and our next goal is to run 10 simultaneous devices (which we have available) and go further from there on.
-
-\subsection{Mobile Application}
-Current demonstration runs off a local server with the client (browser) based on the host machine itself. Since the webserver is based off Flask (Python), deploying it over the internet is easy and only requires some paid subscription for server hosting. After this, the same Web GUI will run on any smartphone browser or can even be integrated into a mobile application.      
-
-\subsection{Implementation at Fractal Analytics}
-Create a set of 10 physical sensors which can be implemented on the 7th floor in Fractal Analytics
-Create a simple mobile app page - which will show the occupancy status of individual rooms on a smart phone
-This will give us an invaluable experience of understanding what it takes to implement a project in a real life live environment
 
 \section{Conclusion}
 We were able to create a wireless network of battery operated devices which which would  sense the occupancy of each room and then relay the occupancy status to a central master device. The device then relayed the real time occupancy status to a local server. A web browser (client) can then dynamically, using websockets, view the status of each node in real-time.
@@ -139,15 +127,30 @@ Special thanks to our institute, Sardar Patel Institute of Technology, for provi
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
-\bibitem{Sparkfun}
-~Sparkfun.com,`nRF24L01TransceiverHookupGuide',[Online]. \\Available:https://learn.sparkfun.com/tutorials/nrf24l01-transceiver-hookup-guide[Accessed:10-Feb-2018]
+\bibitem{RTAB-Map Paper 1}
+M.~Labbé and F.~Michaud, ``Memory management for real-time appearance-based loop closure detection,"
+in \emph{Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems}, 2011, pp. 1271–1276.
 
-\bibitem{scargill}
-~Scargill,'Networkingthenef24l01',[Online]. \\ Available:https://scargill.wordpress.com/2013/05/17/networking-the-nrf24l01/[Accessed:10-Feb-2018]
+\bibitem{Programming Robots with ROS}
+Morgan Quigley, Brian Gerkey, William D. Smart, \emph{Programming Robots with ROS}. 2016, p. 3.
 
-\bibitem{tmrh}
-~TMRh,'OptimizedHighSpeedNRF24L01',[Online]. \\ Available:http://tmrh20.github.io/RF24/[Accessed:17-Apr-2018]
+\bibitem{What is ROS- Quora}
+Po Jen Lai, ``What is ROS? [Online]. Available: 
+https://www.quora.com/What-is-ROS
+[Accessed: 31- Oct- 2017].
 
+\bibitem{What is ROS- Quora}
+Zeeshan Khan S, ``What is ROS?" [Online]. Available: 
+https://www.quora.com/What-is-ROS
+[Accessed: 31- Oct- 2017].
+
+\bibitem{ROS Nodes}
+ROS.org, ``Nodes." ROS wiki [Online]. Available: http://wiki.ros.org/Nodes
+
+\bibitem{RTB-Map}
+Mathieu Labbé, ``Overview on RTAB-Map." [Online]. Available: 
+http://introlab.github.io/rtabmap/
+[Accessed: 31- Oct- 2017].
 
 \end{thebibliography}
 

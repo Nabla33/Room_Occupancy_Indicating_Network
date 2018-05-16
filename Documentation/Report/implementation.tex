@@ -16,16 +16,10 @@ We designed the prototype of the circuit on breadboards which included the micro
 	
 \end{itemize}	
 
-<<<<<<< HEAD
 \vspace{20pt}
-=======
-The breadboard circuit also had a 3.3v regulator to supply the NRF radio module. 
-\begin{center}
-	\includegraphics[scale=0.05]{Breadboard.jpg}
-	\includegraphics[scale=0.05]{Breadboard2.jpg}
-\end{center}
->>>>>>> 38afff322424a330278592820f1a5f55b351dac6
 
+\includegraphics[scale=0.05]{Breadboard.jpg}
+\includegraphics[scale=0.05]{Breadboard2.jpg}
 
 \pagebreak
 
@@ -85,7 +79,6 @@ The lead pitch is 0.8mm for TQFP.
 \\Hence for these reasons we decided to get the PCBs professionally manufactured from a PCB prototyping service (\url{PCBway.com}).
 
 \begin{center}
-<<<<<<< HEAD
 		\includegraphics[scale=0.31]{EaglePCB.png}		
 		\hspace{10pt}
 		\includegraphics[scale=0.075]{PCB_1.jpg}
@@ -103,26 +96,16 @@ The lead pitch is 0.8mm for TQFP.
 		Board with all the components
 		
 		
-=======
-	\includegraphics[scale=0.31]{EaglePCB.png}
-	\includegraphics[scale=0.075]{PCB_1.jpg}
-	
-	\includegraphics[scale=0.05]{PCB_2.jpg}
-	\includegraphics[scale=0.05]{PCB_3.jpg}
-	\\
-	\vspace{10pt}
-	\includegraphics[scale=0.09]{AssemPCB1.jpg}
->>>>>>> 38afff322424a330278592820f1a5f55b351dac6
 \end{center}
 
 \section{3D Modelling and Print}
 Any electronics project is incomplete without a proper enclosure to go with it. Normally we would have built something manually out of acrylic sheets or cardboard, but recently the institute had purchased a 3D printer, and we had multiple nodes to work with, so 3D printing an enclosure was the best option. 
 We designed the 3D models by mainly taking the PCB, RF module and battery into consideration and tried to fit it a small form-factor. The modelling was done on Autodesk Fusion 360 from ground up. Pre-made models of the battery and PIR sensor was found on grabcad.com, which made the modelling process a bit easier.
 After the design process, the model was exported as .stl files and sent to the printer for 3D printing. The first print of the base part failed due to a nozzle clog in the 3D printer. The second print was a success and the print turned out well, with all components falling in perfectly. Next we went ahead and printed the top half of the enclosure and it was a success as well.
+The end result was a neat and aesthetically pleasing which gave the sensor nodes a product-like professional look.
 
 \begin{center}
 	\includegraphics[scale=0.25]{model.png}
-<<<<<<< HEAD
 	
 	Designing in fusion 360	
 	\vspace{15pt}
@@ -132,13 +115,6 @@ After the design process, the model was exported as .stl files and sent to the p
 	Modelling the enclosure as per the PCB dimensions
 	\vspace{15pt}
 	
-=======
-	\\
-	\vspace{10pt}
-	\includegraphics[scale=0.25]{modelling_process.png}
-	\\
-	\vspace{10pt}	
->>>>>>> 38afff322424a330278592820f1a5f55b351dac6
 	\includegraphics[scale=0.065]{3DPrint.jpg}
 	\includegraphics[scale=0.05]{AssemPCB2.jpg}
 	
@@ -147,16 +123,12 @@ After the design process, the model was exported as .stl files and sent to the p
 
 \section{Interface with Master Node and Web-GUI}
 All packets sent from each sensor node are eventually routed to the master node, which relays it to the computer maintaining the web server. The interface between the master node and the computer is done Serially, at a baud rate of 115200 bps. The computer runs a Python script which receives all the sensor data and updates the data on the web server, which displays it to the client (browser). Timestamps are passed between the the web server and client in Unix Epoch format, while a more precise timestamp is logged locally to a text file. 
-Real-time information of all the sensor nodes had to be displayed in a easy to interpret format for the user. In case of Occupeye, the sensor information is displayed on top of the map of the room itself, which makes it incredibly easy to interpret. 
-\begin{center}
-	\includegraphics[scale=0.5]{occupeye_map.png}
-\end{center}
+Real-time information of all the sensor nodes had to be displayed in a easy to interpret format for the user. In case of Occupeye {insert bib reference}, the sensor information is displayed on top of the map of the room itself, which makes it incredibly easy to interpret. 
+{insert image of occupeye sensor state map}
 Since, this is a demonstration model, and since the number of nodes is less, we do not have a fixed outline of a room available so the sensor information is just displayed on a simple browser based GUI.
 The webserver was created using the Flask micro web framework, based off Python, and the client end was designed using HTML, CSS and Javascript. High speed dynamic connection between the client and server is implemented using Socket.IO. The MomentJS javascript library was used for timestamping and does the timekeeping on the client end.
 
-\begin{center}
-	\includegraphics[scale=0.4]{Website1.png}
-	\\
-	\includegraphics[scale=0.4]{Website2.png}
-	%\includegraphics[scale=0.25]{Website3.png}
-\end{center}
+
+\includegraphics[scale=0.25]{Website1.png}
+\includegraphics[scale=0.25]{Website2.png}
+\includegraphics[scale=0.25]{Website3.png}
