@@ -3,6 +3,7 @@
 \contentsline {chapter}{\numberline {3}Market Survey}{3}{chapter.3}
 \contentsline {section}{\numberline {3.1}Workscape}{3}{section.3.1}
 \contentsline {section}{\numberline {3.2}OccupEye}{4}{section.3.2}
+<<<<<<< HEAD
 \contentsline {chapter}{\numberline {4}Implementation and Build}{5}{chapter.4}
 \contentsline {section}{\numberline {4.1}Designing and Prototyping}{5}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Radio Module Selection}{6}{subsection.4.1.1}
@@ -16,3 +17,21 @@
 \contentsline {section}{\numberline {6.2}Mobile Application}{13}{section.6.2}
 \contentsline {section}{\numberline {6.3}Implementation at Fractal Analytics}{13}{section.6.3}
 \contentsline {chapter}{\numberline {7}Conclusion}{14}{chapter.7}
+=======
+\contentsline {chapter}{\numberline {4}Hardware and Software Requirements}{5}{chapter.4}
+\contentsline {section}{\numberline {4.1}Hardware Requirements}{5}{section.4.1}
+\contentsline {section}{\numberline {4.2}Software Requirements}{5}{section.4.2}
+\contentsline {chapter}{\numberline {5}Implementation and Build}{6}{chapter.5}
+\contentsline {section}{\numberline {5.1}Designing and Prototyping}{6}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Radio Module Selection}{6}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Low Power Considerations}{6}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}PCB Design}{7}{section.5.2}
+\contentsline {section}{\numberline {5.3}3D Modelling and Print}{8}{section.5.3}
+\contentsline {section}{\numberline {5.4}Interface with Master Node and Web-GUI}{9}{section.5.4}
+\contentsline {chapter}{\numberline {6}Results}{12}{chapter.6}
+\contentsline {chapter}{\numberline {7}Next Steps}{14}{chapter.7}
+\contentsline {section}{\numberline {7.1}Testing with increased number of nodes}{14}{section.7.1}
+\contentsline {section}{\numberline {7.2}Mobile Application}{14}{section.7.2}
+\contentsline {section}{\numberline {7.3}Implementation at Fractal Analytics}{14}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{15}{chapter.8}
+>>>>>>> 38afff322424a330278592820f1a5f55b351dac6
