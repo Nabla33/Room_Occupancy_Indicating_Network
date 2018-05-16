@@ -15,7 +15,8 @@
 \contentsline {section}{\numberline {5.4}Interface with Master Node and Web-GUI}{10}{section.5.4}
 \contentsline {chapter}{\numberline {6}Results}{12}{chapter.6}
 \contentsline {chapter}{\numberline {7}Next Steps}{14}{chapter.7}
-\contentsline {section}{\numberline {7.1}Testing with increased number of nodes}{14}{section.7.1}
-\contentsline {section}{\numberline {7.2}Mobile Application}{14}{section.7.2}
-\contentsline {section}{\numberline {7.3}Implementation at Fractal Analytics}{14}{section.7.3}
+\contentsline {section}{\numberline {7.1}Testing the Battery Life of the Devices}{14}{section.7.1}
+\contentsline {section}{\numberline {7.2}Testing with increased number of nodes}{14}{section.7.2}
+\contentsline {section}{\numberline {7.3}Mobile Application}{14}{section.7.3}
+\contentsline {section}{\numberline {7.4}Implementation at Fractal Analytics}{14}{section.7.4}
 \contentsline {chapter}{\numberline {8}Conclusion}{15}{chapter.8}
