@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.21)  21 APR 2018 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.16)  18 MAY 2018 02:18
 entering extended mode
 **./bare_jrnl.tex
 (bare_jrnl.tex
@@ -135,17 +135,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
-(bare_jrnl.aux
-
-LaTeX Warning: Label `fig_pcb' multiply defined.
-
-
-LaTeX Warning: Label `fig_print' multiply defined.
-
-
-LaTeX Warning: Label `fig_print' multiply defined.
-
-)
+(bare_jrnl.aux)
 \openout1 = `bare_jrnl.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -230,70 +220,94 @@ G,.JBIG2,.JB2,.eps]
 <./images/all_breadboards.jpg, id=1, 4175.6pt x 2348.775pt>
 File: ./images/all_breadboards.jpg Graphic file (type jpg)
 <use ./images/all_breadboards.jpg>
-Package pdftex.def Info: ./images/all_breadboards.jpg  used on input line 38.
-(pdftex.def)             Requested size: 208.79224pt x 117.44563pt.
-<./images/PCB_1.jpg, id=2, 2160.07pt x 2080.77374pt>
-File: ./images/PCB_1.jpg Graphic file (type jpg)
-<use ./images/PCB_1.jpg>
-Package pdftex.def Info: ./images/PCB_1.jpg  used on input line 48.
-(pdftex.def)             Requested size: 129.5986pt x 124.84103pt.
-<./images/1__30_.jpg, id=3, 4625.28pt x 3468.96pt>
-File: ./images/1__30_.jpg Graphic file (type jpg)
-<use ./images/1__30_.jpg>
-Package pdftex.def Info: ./images/1__30_.jpg  used on input line 55.
-(pdftex.def)             Requested size: 138.75241pt x 104.0643pt.
-<./images/3DPrint.jpg, id=4, 2683.02374pt x 2011.515pt>
-File: ./images/3DPrint.jpg Graphic file (type jpg)
-<use ./images/3DPrint.jpg>
-Package pdftex.def Info: ./images/3DPrint.jpg  used on input line 65.
-(pdftex.def)             Requested size: 160.97447pt x 120.68568pt.
+Package pdftex.def Info: ./images/all_breadboards.jpg  used on input line 40.
+(pdftex.def)             Requested size: 250.52519pt x 140.92041pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 49.
  [1{C:/Users/Srijal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./images/all_breadboards.jpg> <./images/PCB_1.jpg> <./images/1__30_.jpg>]
-<./images/FinalProduct.jpg, id=13, 4625.28pt x 3468.96pt>
+ <./images/all_breadboards.jpg>]
+<./images/1__30_.jpg, id=12, 4625.28pt x 3468.96pt>
+File: ./images/1__30_.jpg Graphic file (type jpg)
+<use ./images/1__30_.jpg>
+Package pdftex.def Info: ./images/1__30_.jpg  used on input line 75.
+(pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
+<./images/AssemPCB2.jpg, id=13, 3559.2975pt x 2668.97125pt>
+File: ./images/AssemPCB2.jpg Graphic file (type jpg)
+<use ./images/AssemPCB2.jpg>
+Package pdftex.def Info: ./images/AssemPCB2.jpg  used on input line 85.
+(pdftex.def)             Requested size: 177.9753pt x 133.45638pt.
+<./images/FinalProduct.jpg, id=14, 4625.28pt x 3468.96pt>
 File: ./images/FinalProduct.jpg Graphic file (type jpg)
 <use ./images/FinalProduct.jpg>
-Package pdftex.def Info: ./images/FinalProduct.jpg  used on input line 75.
-(pdftex.def)             Requested size: 184.97969pt x 138.73477pt.
-<./images/Website1.PNG, id=14, 1156.32pt x 469.15276pt>
+Package pdftex.def Info: ./images/FinalProduct.jpg  used on input line 105.
+(pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
+<./images/Website1.PNG, id=15, 1156.32pt x 469.15276pt>
 File: ./images/Website1.PNG Graphic file (type png)
 <use ./images/Website1.PNG>
-Package pdftex.def Info: ./images/Website1.PNG  used on input line 82.
+Package pdftex.def Info: ./images/Website1.PNG  used on input line 114.
 (pdftex.def)             Requested size: 231.2599pt x 93.82887pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-\OT1/ptm/m/n/8 Available:https://learn.sparkfun.com/tutorials/nrf24l01-transcei
-ver-
+ [2 <./images/1__30_.jpg> <./images/AssemPCB2.jpg> <./images/FinalProduct.jpg> 
+<./images/Website1.PNG>]
+Underfull \hbox (badness 7379) in paragraph at lines 168--171
+[] \OT1/ptm/m/n/8 Spark-fun.com, `nRF24L01+ Transceiver Hookup Guide,' [On-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-\OT1/ptm/m/n/8 Available:https://scargill.wordpress.com/2013/05/17/networking-t
-he-
+Underfull \hbox (badness 2503) in paragraph at lines 168--171
+\OT1/ptm/m/n/8 line]. Available:https://learn.sparkfun.com/tutorials/nrf24l01-t
+ransceiver-
  []
 
-[2 <./images/3DPrint.jpg> <./images/FinalProduct.jpg> <./images/Website1.PNG>]
-(bare_jrnl.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
+[] \OT1/ptm/m/n/8 PCB-Way `PCB Man-u-fac-tur-ing ser-vice' [On-line]. Avail-
+ []
 
- ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
+[] \OT1/ptm/m/n/8 Workscape `Workscape smart sen-sors' [On-line]. Avail-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+[] \OT1/ptm/m/n/8 ROIS on Github, `Room Oc-cu-pancy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+\OT1/ptm/m/n/8 In-di-cat-ing Net-work,' [On-line]. Avail-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+\OT1/ptm/m/n/8 able:https://github.com/Nabla33/Room[]Occupancy[]Indicating[]Net
+work
+ []
+
+[3
+
+] (bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 2286 strings out of 493305
- 37843 string characters out of 3138871
- 101053 words of memory out of 3000000
- 5833 multiletter control sequences out of 15000+200000
- 36230 words of font info for 66 fonts, out of 3000000 for 9000
+ 2291 strings out of 493305
+ 37878 string characters out of 3138871
+ 101042 words of memory out of 3000000
+ 5838 multiletter control sequences out of 15000+200000
+ 37337 words of font info for 67 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,6n,25p,660b,206s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+ 41i,6n,25p,660b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (2 pages, 11919566 bytes).
+Output written on bare_jrnl.pdf (3 pages, 11212423 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 44 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

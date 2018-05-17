@@ -12,14 +12,19 @@
 \contentsline {subsection}{\numberline {5.1.2}Low Power Considerations}{7}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2}PCB Design}{8}{section.5.2}
 \contentsline {section}{\numberline {5.3}3D Modelling and Print}{9}{section.5.3}
-\contentsline {section}{\numberline {5.4}Interface with Master Node and Web-GUI}{10}{section.5.4}
-\contentsline {chapter}{\numberline {6}Results}{12}{chapter.6}
-\contentsline {section}{\numberline {6.1}Final Device}{12}{section.6.1}
-\contentsline {section}{\numberline {6.2}Cost per Device}{13}{section.6.2}
-\contentsline {section}{\numberline {6.3}Website}{14}{section.6.3}
-\contentsline {chapter}{\numberline {7}Next Steps}{15}{chapter.7}
-\contentsline {section}{\numberline {7.1}Testing the Battery Life of the Devices}{15}{section.7.1}
-\contentsline {section}{\numberline {7.2}Testing with increased number of nodes}{15}{section.7.2}
-\contentsline {section}{\numberline {7.3}Mobile Application}{15}{section.7.3}
-\contentsline {section}{\numberline {7.4}Implementation at Fractal Analytics}{15}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{16}{chapter.8}
+\contentsline {section}{\numberline {5.4}Interface with Master Node and Web-GUI}{11}{section.5.4}
+\contentsline {chapter}{\numberline {6}Software}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}Master and Node Codes}{13}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Node}{13}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Master}{14}{subsection.6.1.2}
+\contentsline {chapter}{\numberline {7}Results}{15}{chapter.7}
+\contentsline {section}{\numberline {7.1}Breadboard Testing}{15}{section.7.1}
+\contentsline {section}{\numberline {7.2}Final Device}{15}{section.7.2}
+\contentsline {section}{\numberline {7.3}Cost per Device}{17}{section.7.3}
+\contentsline {section}{\numberline {7.4}Web GUI}{17}{section.7.4}
+\contentsline {chapter}{\numberline {8}Next Steps}{19}{chapter.8}
+\contentsline {section}{\numberline {8.1}Testing the Battery Life of the Devices}{19}{section.8.1}
+\contentsline {section}{\numberline {8.2}Testing with increased number of nodes}{19}{section.8.2}
+\contentsline {section}{\numberline {8.3}Mobile Application}{19}{section.8.3}
+\contentsline {section}{\numberline {8.4}Implementation at Fractal Analytics}{19}{section.8.4}
+\contentsline {chapter}{\numberline {9}Conclusion}{20}{chapter.9}

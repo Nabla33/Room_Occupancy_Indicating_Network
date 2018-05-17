@@ -1,18 +1,21 @@
 \chapter{Results}
-%The following images show the result of mapping using handheld Kinect:
+
+\section{Breadboard Testing}
+
+The intial testing aimed to completely lay out the network configuration as the sending the sensor data was the relatively easy part. The USB connector attached to the breadboard would supply power to all of the devices with the native 5V and regulated 3V3 (using the LM1117-3V3 Regulator) supply voltages with a wall charging adapter or even a power bank which increased portability and made testing easier. Various networking libraries for the NRF24 were tested out. We also conducted range tests with varying transmission bit rates and signal strength and found that the NRF24 satisfied our requirements.
+
+This was the foundation for our project as these results confirmed our concept and so we moved on to making the PCBs while simultaneously conducting further tests and code development on these breadboard prototypes. 
 
 \section{Final Device}
 
-\begin{figure}[ht]
-	\begin{center}
+\begin{center}
 		
-		\includegraphics[scale=.075]{FinalProduct.jpg}
+		\includegraphics[scale=.07]{FinalProduct.jpg}
 		
-		\caption{Final Assembled Device}
-		%\label{fig:Final}
-		
-		\end{center}
-\end{figure}
+		Final Assembled Device
+
+\end{center}
+
 
 All the end nodes stay in a deep sleep state. They wake up only when a change of state in the PIR sensor is detected or when the WDT overflows. 
 
@@ -23,12 +26,16 @@ The routers are always awake and listening so that they can route information be
 
 The current of the end nodes is 18mA when transmitting but it is only 80$\mu$A when it is in standby mode. This will significantly improve the battery life of the devices.
 
-All the devices are configured in a tree network configuration to increase the range of the network.
+All the devices are configured in a tree network configuration to increase the range of the network. Each NRF24 Module can support upto 6 slave devices simultaneously, so the network has to be designed appropriately while setting it up in any real environment.
+
+\vspace{10pt}
 \begin{center}
-	\includegraphics[scale=.17]{TreeNW.jpg}
+	\includegraphics[scale=0.25]{TreeNW.jpg}
 	
 	Tree network topology
 \end{center}
+
+\pagebreak
 
 \section{Cost per Device}
 
@@ -51,16 +58,35 @@ The cost distribution per device is as follows
 	\end{tabular}
 \end{center}
 
-\pagebreak
+This is much lower than other such sensing systems such as Workscape\cite{workscape} and Occupeye\cite{occupeye}, which typically have a pricing of 15\textdollar \hspace{1pt} per device, per month; as stated earlier.
 
-\section{Website}
-The occupancy status of each room can be seen on the website.
+
+\section{Web GUI}
+The occupancy status of each room can be seen on the webpage created.
 
 \begin{center}
-	\includegraphics[scale=0.25]{Website1.png}
-	\\ \textbf{Website}
+	\includegraphics[scale=0.35]{Website1_alternate.PNG}
+     Web GUI
 \end{center}
 
-Real time occupancy status can be seen 
+Real time occupancy status can be seen on any web browser. The colours indicate state of each node. Green and Red indicate that the node is ON and actively sensing, and their sensor state is represented. The time since the current state has occured is also shown. Greyed out nodes are not active and are either switched OFF or their connection is broken. 
+
+\pagebreak
+
+\begin{center}
+	\includegraphics[scale=0.7]{log.png} \\
+	Log files generated
+	
+	\vspace{20pt}
+	
+	\includegraphics[scale=0.7]{log_sample.png} \\
+	A sample log file
+\end{center}
+
+
+The status, location and a precise timestamp of each node gets stored in a log file which can be used to debug or check past sensor states. New log files are generated every day and are organised by date. 
+
+
+
 
 

@@ -1,5 +1,10 @@
 \chapter{Conclusion}
-We were able to create a wireless tree network of low powered battery operated devices which which would sense the occupancy of each room and then relay the occupancy status to a central master
-device. The device then relayed the real time occupancy status to a local server. 
-\\
-A web browser (client) can then dynamically, using websockets, view the status of each node in real-time.
+We were able to create a wireless tree network of low powered battery operated devices which which would sense the occupancy of each room and then relay the occupancy status to a central master device. The device then relayed the real time occupancy status to a local server. A web browser (client) can then dynamically, using websockets, view the status of each node in real-time.
+
+The cost per device (~900 INR) is much less than the current available commercial alternatives such as Workscape\cite{workscape} and Occupeye\cite{occupeye}, which typically are priced at 15\textdollar \hspace{1pt} per device per month, as stated earlier. Hence the goal of making a low cost device has been achieved.
+
+The software can be greatly improved further to make the system robust and easily scalable, but the system at its current state is a lays a strong foundation for future development.
+
+There are also a few hardware changes that could be made such as rearranging the components on the PCB for a smaller form-factor and utilizing the RTC port for such as alarm interrupt for sending heartbeat packets, and get more power savings by a complete shutdown after office hours, holidays etc.
+
+Summarizing, we conclude that the Minproject has been completed as per our expectations and the targets set by the Hypothesis have been met. 
