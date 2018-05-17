@@ -14,9 +14,12 @@
 \contentsline {section}{\numberline {5.3}3D Modelling and Print}{9}{section.5.3}
 \contentsline {section}{\numberline {5.4}Interface with Master Node and Web-GUI}{10}{section.5.4}
 \contentsline {chapter}{\numberline {6}Results}{12}{chapter.6}
-\contentsline {chapter}{\numberline {7}Next Steps}{14}{chapter.7}
-\contentsline {section}{\numberline {7.1}Testing the Battery Life of the Devices}{14}{section.7.1}
-\contentsline {section}{\numberline {7.2}Testing with increased number of nodes}{14}{section.7.2}
-\contentsline {section}{\numberline {7.3}Mobile Application}{14}{section.7.3}
-\contentsline {section}{\numberline {7.4}Implementation at Fractal Analytics}{14}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{15}{chapter.8}
+\contentsline {section}{\numberline {6.1}Final Device}{12}{section.6.1}
+\contentsline {section}{\numberline {6.2}Cost per Device}{13}{section.6.2}
+\contentsline {section}{\numberline {6.3}Website}{14}{section.6.3}
+\contentsline {chapter}{\numberline {7}Next Steps}{15}{chapter.7}
+\contentsline {section}{\numberline {7.1}Testing the Battery Life of the Devices}{15}{section.7.1}
+\contentsline {section}{\numberline {7.2}Testing with increased number of nodes}{15}{section.7.2}
+\contentsline {section}{\numberline {7.3}Mobile Application}{15}{section.7.3}
+\contentsline {section}{\numberline {7.4}Implementation at Fractal Analytics}{15}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{16}{chapter.8}
